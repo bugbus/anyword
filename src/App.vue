@@ -1,10 +1,23 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <WordCard/>
 </template>
+
+<script lang="ts">
+import WordCard from "./components/Word.vue";
+import {reactive} from "vue";
+
+export default {
+  components: {
+    WordCard
+  }
+};
+// @Options({
+//   components: {
+//     HelloWorld
+//   }
+// })
+// export default class Home extends Vue {}
+</script>
 
 <style lang="less">
 #app {
@@ -16,8 +29,6 @@
 }
 
 #nav {
-  padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;

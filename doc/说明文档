@@ -1,0 +1,15 @@
+工程框架创建：
+https://zhuanlan.zhihu.com/p/60952007
+
+electron 整合
+https://www.cnblogs.com/jiangxifanzhouyudu/p/9517651.html
+
+参考项目：
+https://github.com/biaochenxuying/blog-vue-typescript
+
+element-UI
+https://element.eleme.cn/#/zh-CN/component/container
+
+mac更换包管理器npm/yarn
+vi ~/.vuerc
+

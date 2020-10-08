@@ -1,0 +1,25 @@
+{
+    //编译选项 https://www.tslang.cn/docs/handbook/compiler-options.html
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        //在表达式和声明上有隐含的 any类型时报错。
+        "noImplicitAny": true,
+        //删除所有注释，除了以 /!*开头的版权信息。
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "outDir":"../../tests/core"
+    },
+    // "files": [
+    //     "sys.ts",
+    //     //"files"指定一个包含相对或绝对文件路径的列表。
+    // ],
+    "include":[
+        ".",
+    ],
+    "exclude":[
+        "build",
+        "node_modules",
+    ]
+}
