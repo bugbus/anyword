@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import WordCard from "./components/Word.vue";
+import WordCard from "./views/components/Word.vue";
 import {reactive} from "vue";
 
 export default {
