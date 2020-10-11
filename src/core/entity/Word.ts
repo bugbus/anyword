@@ -2,7 +2,7 @@ import AnyClass from "./AnyClass";
 import Comments from "./Comments";
 
 class Word extends AnyClass {
-  单词: string;
+  public 单词: string;
   发音: string;
   评论: Comments;
   constructor(单词 = "", 发音 = "", 评论 = new Comments()) {

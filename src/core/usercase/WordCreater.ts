@@ -4,13 +4,11 @@ import Comments from "../entity/Comments";
 import Word from "../entity/Word";
 import Describe from "../entity/Describe";
 
-class CreateWord {
+class WordCreater {
   wordCard: WordCard = new WordCard();
-  // constructor() {
-  //   this.testCreate();
-  // }
+  
   constructor(wordCard = new WordCard()) {
       this.wordCard = wordCard;
   }
 }
-export default CreateWord
+export default WordCreater
