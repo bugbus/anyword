@@ -6,8 +6,8 @@
     <div id="dis">
       <div v-if="!state.visible">
         <button 
-          v-bind:key="显示状态"
-          @click="想不起来()">
+          v-bind:key="显示状态ID"
+          @click="action.想不起来()">
           想不起来
         </button>
       </div>
@@ -16,8 +16,16 @@
       </div>
     </div>
     <div id="footer">
-      <button>知道</button>
-      <button>忘了</button>
+      <button
+        v-bind:key="知道ID"
+        @click="action.知道()">
+          知道
+      </button>
+      <button
+        v-bind:key="忘了ID"
+        @click="action.忘了()">
+          忘了
+      </button>
     </div>
   </div>
 </template>
@@ -27,6 +35,17 @@ export default{
   setup() {
     const state = reactive({
       visible:false
+    });
+    const action = reactive({
+      想不起来: ()=>{
+        state.visible = true;
+      },
+      知道: ()=>{
+        state.visible = true;
+      },
+      忘了: ()=>{
+        state.visible = false;
+      }
     });
     const data = reactive({
       girls:"",
@@ -41,20 +60,10 @@ export default{
       state.visible = false;
     });
 
-
-    const 想不起来 = ()=>{
-      state.visible = true;
-    }
-    const 知道 = ()=>{
-      state.visible = true;
-    }
-    const 不知道 = ()=>{
-      state.visible = true;
-    }
     return {
       data,
       state,
-      想不起来
+      action,
     };
 
   }
